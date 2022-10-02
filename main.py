@@ -242,7 +242,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        #tl_admin_user = 'obidevel'
+        #tl_admin_user = 'Jose_PC98'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -262,7 +262,7 @@ def onmessage(update,bot:ObigramClient):
         else:
             mensaje = "🚷 No tienes Acceso 🚷"
             reply_markup = inlineKeyboardMarkup(
-                r1=[inlineKeyboardButton('⚙Contactar Soporte⚙',url='https://t.me/obidevel')]
+                r1=[inlineKeyboardButton('⚙Contactar Soporte⚙',url='https://t.me/Jose_PC98')]
             )
             bot.sendMessage(update.message.chat.id,mensaje,reply_markup=reply_markup)
             return
@@ -600,8 +600,8 @@ def onmessage(update,bot:ObigramClient):
 
         if '/start' in msgText:
             reply_markup = inlineKeyboardMarkup(
-                r1=[inlineKeyboardButton('📊 Github Dev 📊', url='https://github.com/ObisoftDev'),
-                    inlineKeyboardButton('⚙ Soporte ⚙', url='https://t.me/obidevel')]
+                r1=[inlineKeyboardButton('📊 Canal del Dev 📊', url='https://t.me/freenube'),
+                    inlineKeyboardButton('⚙ Soporte ⚙', url='https://t.me/Jose_PC98')]
             )
             bot.editMessageText(message,infos.dashboard(),parse_mode='html',reply_markup=reply_markup)
         elif '/token' in msgText:
@@ -715,9 +715,9 @@ def onmessage(update,bot:ObigramClient):
             #    bot_token = os.environ.get('bot_token')
             #    
                 # set in debug
-            #    api_id = 7386053
-            #    api_hash = '78d1c032f3aa546ff5176d9ff0e7f341'
-            #    bot_token = '5124841893:AAH30p6ljtIzi2oPlaZwBmCfWQ1KelC6KUg'
+            #    api_id = 18403498
+            #    api_hash = '2c0b01283b1b67f7087a92cc81cd91f8'
+            #    bot_token = '5432390990:AAFFEgDwIWzxdLV5KWPyt4TgMYdIwqndjyU'
 
             #    chat_id = int(update.message.chat.id)
             #    message_id = int(update.message.message_id)
@@ -818,7 +818,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     print('init bot.')
     #set in debug
-    #bot_token = '5350913309:AAE6_F3tyck8PQSComzgd0o6AeQ3xpKDcIU'
+    #bot_token = '5432390990:AAFFEgDwIWzxdLV5KWPyt4TgMYdIwqndjyU'
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     bot.onCallbackData('/cancel ',cancel_task)
